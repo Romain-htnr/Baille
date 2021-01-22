@@ -1,0 +1,14 @@
+<div class="effect">
+  <span class="baille">Baille</span>
+  <span class="smiley">:)</span>
+  <span class="baille2">Baille</span>
+</div>
+
+<script>
+document.querySelector('.effect').onmousemove = (e) => {
+const x = e.pageX - e.target.offsetLeft
+const y = e.pageY - e.target.offsetTop
+e.target.style.setProperty('--x', `${ x }px`)
+e.target.style.setProperty('--y', `${ y }px`)
+}
+</script>

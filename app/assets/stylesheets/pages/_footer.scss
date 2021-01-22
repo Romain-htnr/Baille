@@ -1,0 +1,46 @@
+.effect {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  appearance: none;
+  height: 4rem;
+  background: linear-gradient(0.25turn, #ffffff 0%, #5b24cd 20%, 90%, #ffffff 100%);
+  border: none;
+  color: white;
+  font-size: 1.2em;
+  outline: none;
+  overflow: hidden;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+
+  span {
+    position: relative;
+    top: 35%;
+  }
+
+  &::before {
+    --size: 0;
+    content: '';
+    position: absolute;
+    left: var(--x);
+    top: var(--y);
+    width: var(--size);
+    height: var(--size);
+    background: radial-gradient(circle closest-side, #5b24cd, white);
+    transform: translate(-50%, -50%);
+    transition: width .001s ease, height .001s ease;
+  }
+
+  &:hover::before {
+    --size: 4000px;
+  }
+}
+
+.baille {
+  margin-left: 120px;
+}
+
+.baille2 {
+  margin-right: 120px;
+}
