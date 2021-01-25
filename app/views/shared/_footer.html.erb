@@ -1,14 +1,33 @@
-<div class="effect">
+
+<div class="effect top">
+  <span class="baille">Baille</span>
+  <span class="smiley">:)</span>
+  <span class="baille2">Baille</span>
+</div>
+<div class="first-flex">
+  <div class="effect left">
+    <span class="baille">Baille</span>
+    <span class="smiley"><%= Time.now %></span>
+    <span class="baille2">Baille</span>
+  </div>
+  <div class="effect right">
+    <span class="baille">Baille</span>
+    <span class="smiley">:)</span>
+    <span class="baille2">Baille</span>
+  </div>
+</div>
+<div class="effect bottom">
   <span class="baille">Baille</span>
   <span class="smiley">:)</span>
   <span class="baille2">Baille</span>
 </div>
 
 <script>
-document.querySelector('.effect').onmousemove = (e) => {
-const x = e.pageX - e.target.offsetLeft
-const y = e.pageY - e.target.offsetTop
-e.target.style.setProperty('--x', `${ x }px`)
-e.target.style.setProperty('--y', `${ y }px`)
-}
+window.addEventListener('mousemove', function(e) {
+  const div = document.querySelector('.effect');
+  const x = e.pageX - e.target.offsetLeft
+  const y = e.pageY - e.target.offsetTop
+  e.target.style.setProperty('--x', `${ x }px`)
+  e.target.style.setProperty('--y', `${ y }px`)
+});
 </script>

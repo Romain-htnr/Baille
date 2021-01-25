@@ -1,7 +1,5 @@
 .effect {
   position: absolute;
-  bottom: 0;
-  width: 100%;
   appearance: none;
   height: 4rem;
   background: linear-gradient(0.25turn, #ffffff 0%, #5b24cd 20%, 90%, #ffffff 100%);
@@ -37,10 +35,37 @@
   }
 }
 
+
 .baille {
   margin-left: 120px;
 }
 
 .baille2 {
   margin-right: 120px;
+}
+
+.bottom {
+  width: 100%;
+  bottom: 0;
+}
+
+.top {
+  width: 100%;
+  top: 0;
+}
+
+.first-flex {
+  display: flex;
+  justify-content: align-items;
+}
+
+.left {
+  top: 70px;
+  width: 70%;
+}
+
+.right {
+  top: 70px;
+  left: 1000px;
+  width: 30%;
 }
